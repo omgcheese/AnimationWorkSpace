@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="polygon1">#ffe84c65</color>
+    <color name="polygon2">#ffd554d9</color>
+    <color name="polygon3">#ffaf6eee</color>
+    <color name="polygon4">#ff4a4ae6</color>
+    <color name="polygon5">#ff4294e7</color>
+    <color name="polygon6">#ff6beeee</color>
+    <color name="polygon7">#ff42e794</color>
+</resources>

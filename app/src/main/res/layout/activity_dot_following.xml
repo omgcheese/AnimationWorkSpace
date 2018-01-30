@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.cheesycoder.animationtutorial.path_tracing.MultiplePolygonsView
+        android:id="@+id/multi_polygon_view"
+        android:layout_width="match_parent"
+        android:layout_height="500dp" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/to_avd_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To AVD"/>
+
+</LinearLayout>
