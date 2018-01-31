@@ -1,10 +1,12 @@
 package com.cheesycoder.animationtutorial.avd
 
 import android.content.Context
+import android.support.annotation.Nullable
 import android.support.v7.widget.AppCompatTextView
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
+import com.airbnb.epoxy.CallbackProp
 import com.airbnb.epoxy.ModelView
 import com.airbnb.epoxy.TextProp
 import com.cheesycoder.animationtutorial.R
@@ -39,5 +41,10 @@ class SimpleView @JvmOverloads constructor(
     @TextProp
     fun setSimpleTextView(text: CharSequence) {
         simpleTextView.text = text
+    }
+
+    @CallbackProp
+    fun setOnClickSimpleViewListener(@Nullable onClickListener: OnClickListener?) {
+       setOnClickListener(onClickListener)
     }
 }
