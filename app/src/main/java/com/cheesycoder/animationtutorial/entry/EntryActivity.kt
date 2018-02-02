@@ -32,7 +32,6 @@ class EntryActivity: AppCompatActivity(), EntryNavigationCallbacks {
         setContentView(R.layout.activity_entry)
         val controller = EntryController(this)
         findViewById<RecyclerView>(R.id.list).apply {
-            addItemDecoration(DividerItemDecoration(context, LinearLayout.VERTICAL))
             layoutManager = LinearLayoutManager(this@EntryActivity)
             adapter = controller.adapter
         }
