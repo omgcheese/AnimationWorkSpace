@@ -2,6 +2,7 @@ package com.cheesycoder.animationtutorial.entry
 
 import android.view.View
 import com.airbnb.epoxy.EpoxyController
+import com.cheesycoder.animationtutorial.R
 import com.cheesycoder.animationtutorial.avd.SimpleViewModel_
 
 /**
@@ -22,26 +23,32 @@ class EntryController(private val entryNavigationCallbacks: EntryNavigationCallb
         requestModelBuild()
     }
     override fun buildModels() {
-        SimpleViewModel_()
+        EntryViewModel_()
                 .id("Polygon Factory")
-                .simpleTextView("Polygon Factory")
-                .onClickSimpleViewListener(View.OnClickListener {
+                .title("Polygon Factory")
+                .body("Example of polygon creation. Sides, corners, and path length can be modified")
+                .imageRes(R.drawable.polygon_factory)
+                .onClickNavigation(View.OnClickListener {
                     entryNavigationCallbacks.onClickPolygonFactory()
                 })
                 .addTo(this)
 
-        SimpleViewModel_()
+        EntryViewModel_()
                 .id("Path Tracing")
-                .simpleTextView("Path Tracing")
-                .onClickSimpleViewListener(View.OnClickListener {
+                .title("Path Tracing")
+                .body("Multiple polygons is drawn. Dots will be following corresponding path.")
+                .imageRes(R.drawable.path_tracing)
+                .onClickNavigation(View.OnClickListener {
                     entryNavigationCallbacks.onClickPathTracing()
                 })
                 .addTo(this)
 
-        SimpleViewModel_()
+        EntryViewModel_()
                 .id("AVD")
-                .simpleTextView("AVD")
-                .onClickSimpleViewListener(View.OnClickListener {
+                .title("AVD")
+                .body("Example of Rendering Thread")
+                .imageRes(R.drawable.avd)
+                .onClickNavigation(View.OnClickListener {
                     entryNavigationCallbacks.onClickAVD()
                 })
                 .addTo(this)
