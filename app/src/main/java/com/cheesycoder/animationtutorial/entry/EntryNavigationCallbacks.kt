@@ -1,5 +1,7 @@
 package com.cheesycoder.animationtutorial.entry
 
+import android.view.View
+
 /**
  * Author: jinwo
  * Date: 2018-01-30
@@ -17,7 +19,7 @@ interface EntryNavigationCallbacks {
     /**
      * Navigate to Polygon Factory [com.cheesycoder.animationtutorial.polygonfactory.MainActivity]
      */
-    fun onClickPolygonFactory()
+    fun onClickPolygonFactory(positionX: Float, positionY: Float, view: View)
 
     /**
      * Navigate to Path Tracing [com.cheesycoder.animationtutorial.path_tracing.DotFollowingActivity]

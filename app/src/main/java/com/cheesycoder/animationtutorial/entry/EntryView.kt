@@ -74,4 +74,9 @@ class EntryView @JvmOverloads constructor(
     fun setOnClickNavigation(@Nullable onClickListener: OnClickListener?) {
         setOnClickListener(onClickListener)
     }
+
+    @CallbackProp
+    fun setOnTouchEventListener(@Nullable onTouchListener: OnTouchListener?) {
+        setOnTouchListener(onTouchListener)
+    }
 }
