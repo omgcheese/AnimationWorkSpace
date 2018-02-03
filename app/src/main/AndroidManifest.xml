@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".polygonfactory.MainActivity"/>
+        <activity android:name=".polygonfactory.MainActivity"
+            android:theme="@style/AppTheme.Transparent"/>
         <activity android:name=".path_tracing.DotFollowingActivity"/>
         <activity android:name=".avd.AvdActivity"/>
     </application>

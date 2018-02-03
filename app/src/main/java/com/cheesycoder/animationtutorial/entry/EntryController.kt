@@ -19,6 +19,8 @@ import com.cheesycoder.animationtutorial.avd.SimpleViewModel_
  *\       ''--.~.|/
  */
 class EntryController(private val entryNavigationCallbacks: EntryNavigationCallbacks): EpoxyController() {
+    private var touchX: Float = 0f
+    private var touchY: Float = 0f
     init {
         requestModelBuild()
     }
@@ -28,8 +30,13 @@ class EntryController(private val entryNavigationCallbacks: EntryNavigationCallb
                 .title("Polygon Factory")
                 .body("Example of polygon creation. Sides, corners, and path length can be modified")
                 .imageRes(R.drawable.polygon_factory)
+                .onTouchEventListener(View.OnTouchListener { v, event ->
+                    touchX = event.x
+                    touchY = event.y
+                    return@OnTouchListener false
+                })
                 .onClickNavigation(View.OnClickListener {
-                    entryNavigationCallbacks.onClickPolygonFactory()
+                    entryNavigationCallbacks.onClickPolygonFactory(touchX, touchY, it)
                 })
                 .addTo(this)
 
